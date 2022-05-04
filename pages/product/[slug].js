@@ -5,7 +5,6 @@ import { useStateContext } from '../../context/StateContext';
 import { client, urlFor } from '../../lib/client';
 
 const ProductDetails = ({ product, products }) => {
-    console.log(product)
     const {image, name, details, price } = product;
     const [index, setIndex] = useState(0)
     const { decQty, incQty, qty, onAdd } = useStateContext()
@@ -46,8 +45,7 @@ const ProductDetails = ({ product, products }) => {
                 <div className="quantity">
                     <h3>Quantity: </h3>
                     <p className='quantity-desc'>
-                        <span c
-                        lassName="minus"
+                        <span className="minus"
                         onClick={decQty}>
                             <AiOutlineMinus />
                         </span>
